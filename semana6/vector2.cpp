@@ -4,13 +4,14 @@
 #include <iostream>
 #include <vector>
 #include <string>
+using namespace std; 
 
 int main() {
-    std::vector<std::string> palabras;
-    std::string palabra, resultado;
+    vector<string> palabras;
+    string palabra, resultado;
 
-    std::cout << "Ingrese palabras (fin para terminar): " << std::endl;
-    while(std::cin >> palabra && palabra != "fin") {
+    cout << "Ingrese palabras (fin para terminar): " << endl;
+    while(cin >> palabra && palabra != "fin") {
         palabras.push_back(palabra);
     }
 
@@ -18,7 +19,7 @@ int main() {
         resultado += palabras[i] + " ";
     }
 
-    std::cout << "Resultado: " << resultado << std::endl;
+    cout << "Resultado: " << resultado << endl;
 
     return 0;
 }

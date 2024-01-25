@@ -2,14 +2,15 @@
  
 #include <iostream>
 #include <vector>
+using namespace std; 
 
 int main() {
-    std::vector<char> caracteres = {'a', 'b', 'c', 'd', 'a', 'a', 'b', 'c'};
+    vector<char> caracteres = {'a', 'b', 'c', 'd', 'a', 'a', 'b', 'c'};
     char caracter;
     int contador = 0;
 
-    std::cout << "Ingrese un caracter: ";
-    std::cin >> caracter;
+    cout << "Ingrese un caracter: ";
+    cin >> caracter;
 
     for(int i = 0; i < caracteres.size(); i++) {
         if(caracteres[i] == caracter) {
@@ -17,7 +18,7 @@ int main() {
         }
     }
 
-    std::cout << "El caracter " << caracter << " aparece " << contador << " veces." << std::endl;
+    cout << "El caracter " << caracter << " aparece " << contador << " veces." << endl;
 
     return 0;
 }

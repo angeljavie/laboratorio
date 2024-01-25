@@ -4,21 +4,21 @@
 #include <iostream>
 #include <vector>
 #include <algorithm>
-
+using namespace std; 
 int main() {
-    std::vector<int> numeros;
+    vector<int> numeros;
     int valor;
 
-    std::cout << "Ingrese valores enteros (0 para terminar): " << std::endl;
-    while(std::cin >> valor && valor != 0) {
+    cout << "Ingrese valores enteros (0 para terminar): " << endl;
+    while(cin >> valor && valor != 0) {
         numeros.push_back(valor);
     }
 
-    std::sort(numeros.begin(), numeros.end());
+    sort(numeros.begin(), numeros.end());
 
-    std::cout << "Vector ordenado: ";
+    cout << "Vector ordenado: ";
     for(int i = 0; i < numeros.size(); i++) {
-        std::cout << numeros[i] << " ";
+        cout << numeros[i] << " ";
     }
 
     return 0;

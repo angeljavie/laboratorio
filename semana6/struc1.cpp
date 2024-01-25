@@ -1,29 +1,30 @@
 #include <iostream>
 #include <vector>
-
+using namespace std; 
 struct Alumno {
-    std::string nombre;
+    string nombre;
     int edad;
     float calificacion;
 };
 
 int main() {
-    std::vector<Alumno> alumnos;
+    vector<Alumno> alumnos;
     Alumno temp;
     int num;
 
-    std::cout << "Ingrese el número de estudiantes: ";
-    std::cin >> num;
+    cout << "Ingrese el número de estudiantes: ";
+    cin >> num;
 
     for(int i = 0; i < num; i++) {
-        std::cout << "Ingrese el nombre, edad y calificación del estudiante " << i+1 << ": ";
-        std::cin >> temp.nombre >> temp.edad >> temp.calificacion;
+        cout << "Ingrese el nombre, edad y calificación del estudiante " << i+1 << ": ";
+        cin >> temp.nombre >> temp.edad >> temp.calificacion;
         alumnos.push_back(temp);
+        
     }
 
-    std::cout << "\nInformación de los estudiantes: " << std::endl;
+    cout << "\nInformación de los estudiantes: " << endl;
     for(int i = 0; i < num; i++) {
-        std::cout << "Estudiante " << i+1 << ": " << alumnos[i].nombre << ", " << alumnos[i].edad << ", " << alumnos[i].calificacion << std::endl;
+        cout << "Estudiante " << i+1 << ": " << alumnos[i].nombre << ", " << alumnos[i].edad << ", " << alumnos[i].calificacion << endl;
     }
 
     return 0;

@@ -1,5 +1,7 @@
 #include <iostream>
 #define SIZE 3
+using namespace std; 
+
 
 int main() {
     int matriz1[SIZE][SIZE] = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
@@ -12,12 +14,12 @@ int main() {
         }
     }
 
-    std::cout << "Matriz resultante: " << std::endl;
+   cout << "Matriz resultante: " << endl;
     for(int i = 0; i < SIZE; i++) {
         for(int j = 0; j < SIZE; j++) {
-            std::cout << matrizSuma[i][j] << " ";
+           cout << matrizSuma[i][j] << " ";
         }
-        std::cout << std::endl;
+        cout << endl;
     }
 
     return 0;

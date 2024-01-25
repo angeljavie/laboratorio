@@ -18,8 +18,10 @@ int main() {
     int nota;
 
     for(int i = 0; i < 6; i++) {
-        nota = rand() % 21; // Genera una nota aleatoria entre 0 y 20.
-        pila.push_back(convertirNota(nota)); // Convierte la nota a su equivalente en letra y la agrega a la pila.
+        nota = rand() % 21; 
+        // Genera una nota aleatoria entre 0 y 20.
+        pila.push_back(convertirNota(nota)); 
+        // Convierte la nota a su equivalente en letra y la agrega a la pila.
     }
 
         cout << "Notas en la pila: ";
