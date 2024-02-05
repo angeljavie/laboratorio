@@ -1,4 +1,5 @@
-/* Sucesión de Collatz: Escribe un programa que tome un número entero positivo n como entrada y genere la secuencia de Collatz para ese número. La secuencia de Collatz se obtiene siguiendo estas reglas:
+/* Sucesión de Collatz: Escribe un programa que tome un número entero positivo n 
+como entrada y genere la secuencia de Collatz para ese número. La secuencia de Collatz se obtiene siguiendo estas reglas:
 a.  Si n es par, divídelo por 2.
 b.  Si n es impar, multiplícalo por 3 y suma 1.
 c.  Repite el proceso hasta llegar al número 1.
