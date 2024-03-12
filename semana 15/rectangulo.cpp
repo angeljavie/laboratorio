@@ -10,22 +10,22 @@ public:
 
 };
 
-class circulo : public FormaGeometrica
+class Rectangulo : public FormaGeometrica
 {
 private:
-    double pi = 3.14;
-    double radio;
+    double base;
+    double altura;
 public:
-    circulo();
-    circulo(double b, double r){
-        pi = b;
-        radio = r;
+    Rectangulo();
+    Rectangulo(double l, double a){
+        base = l;
+        altura = a;
     } 
 
     void dibujar() const override{
-        cout<<"dibujando el circulo"<<endl;
+        cout<<"dibujando el rectangulo"<<endl;
     }
     double calcular_Area() const override {
-        return  pi * (radio * radio);
+        return base * altura;
     }
 };

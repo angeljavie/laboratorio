@@ -2,73 +2,81 @@
 #include <string>
 #include <ctime>
 using namespace std;
-
-
-
-
-class producto
+class Producto
 {
 private:
     /* data */
     int id_producto;
     string descripcion;
     string tipo;
-    int fecha;
-    float precio;
-public:
-    producto ( int _producto, string _descripcion, int _fecha, int _precio )
-    {
-    id_producto = _producto;
-    descripcion = _descripcion;
-    fecha = _fecha;
-    precio = _precio;
-    }
+    string fecha;
+    string precio;
 
-    int Getid_producto() const
+public:
+    Producto(/* args */);
+    Producto(string _tipo, string _precio, string _descripcion, int _id_producto, string _fecha)
+    {
+        id_producto = _id_producto;
+        tipo = _tipo;
+        fecha = _fecha;
+        precio = _precio;
+        descripcion = _descripcion;
+    };
+    int GetId_producto() const
     {
         return id_producto;
     }
 
-    void Setid_producto(int id_producto)
+    void SetId_producto(int id_producto)
     {
-       id_producto = id_producto;
+        id_producto = id_producto;
     }
-    string getipo() const
-    {
-        return tipo;
-    }
-    void settipo(string tipo)
-    {
-        tipo = tipo;
-    }
-    string Getdescripcion() const
+
+    string GetDiscripcion() const
     {
         return descripcion;
     }
 
-    void Setdescripcion (string descripcion)
+    void SetDiscripcion(string discripcion)
     {
-       descripcion = descripcion;
+        discripcion = discripcion;
     }
 
-    int Getfecha() const
+    string GetTipo() const
+    {
+        return tipo;
+    }
+
+    void SetTipo(string tipo)
+    {
+        tipo = tipo;
+    }
+
+    string GetFecha() const
     {
         return fecha;
     }
 
-    void Setfechas(int fechas)
+    void SetFecha(string fecha)
     {
-        fechas = fechas;
+        fecha = fecha;
     }
 
-    double Getprecio() const
+    string GetPrecio() const
     {
         return precio;
     }
 
-    void Setprecios(double precios)
+    void SetPrecio(string precio)
     {
-        precios = precios;
+        precio = precio;
     }
-
+    string to_string()
+    {
+        return " " + descripcion + " - " + tipo;
+    }
+    string datos_producto(){
+        string resumen = "Producto: " + descripcion + " --> Precio:  " + precio + " \n";
+        return resumen;
+        }
 };

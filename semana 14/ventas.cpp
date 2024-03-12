@@ -1,57 +1,63 @@
-#include<iostream>
-#include<string>
-#include<ctime>
+#include <iostream>
+#include <string>
+#include <ctime>
+using namespace std;
 
-using namespace std; 
-
-class ventas
+class Ventas
 {
 private:
     /* data */
-    int id_venta;
+    int id_ventas;
     int id_producto;
-    int fecha;
-    int stock;
+    string fecha;
+    int cantidad;
+
 public:
-    ventas(/* args */);
-    ventas(int _ventas, int _producto, int _fecha, int _stock) {
-        id_venta = _ventas;
-        id_producto = _producto;
-        fecha = _fecha;
-        stock = _stock;
-    }
-    int getid_venta() const
+    Ventas(/* args */);
+    Ventas(int _id_ventas, int _id_producto, string _fecha, int _cantidad)
     {
-        return id_venta;
+        id_ventas = _id_ventas;
+        id_producto = _id_producto;
+        fecha = _fecha;
+        cantidad = _cantidad;
+    };
+    int GetId_ventas() const
+    {
+        return id_ventas;
     }
-    void setid_ventas(int id_ventas)
+
+    void SetId_ventas(int id_ventas)
     {
         id_ventas = id_ventas;
     }
-    int getid_producto() const
+
+    int GetId_producto() const
     {
         return id_producto;
     }
-    void setid_productos(int id_productos)
+
+    void SetId_producto(int id_producto)
     {
-        id_productos = id_productos;
+        id_producto = id_producto;
     }
-    int getfecha() const
+
+    string GetFecha() const
     {
         return fecha;
     }
-    void setfechas( int fechas)
+
+    void SetFecha(string fecha)
     {
-        fechas = fechas;
+        fecha = fecha;
     }
-    int getstock() const
+
+    int GetCantidad() const
     {
-        return stock;
+        return cantidad;
     }
-    void setstock (int stock)
+
+    void SetCantidad(int cantidad)
     {
-        stock = stock;
+        cantidad = cantidad;
     }
 };
-
-

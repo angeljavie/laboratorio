@@ -1,32 +1,35 @@
-#include<iostream>
-#include<string>
-#include<ctime>
-
+#include <iostream>
+#include <string>
+#include <ctime>
 using namespace std;
 
-
-class persona1
+class Persona
 {
 private:
-    int id ;
+    /* data */
+    int id;
     string apellidos;
     string nombres;
-    string DNI;
+    int dni;
     string direccion;
 
 public:
-    persona1(string _dni, string _apellidos, string _nombre, string _direcion){
+    Persona(/* args */);
+    Persona(int _id, string _apellidos, string _nombres, int _dni, string _direccion)
+    {
+        id = _id;
         apellidos = _apellidos;
-        DNI = _dni;
-        nombres = _nombre;
-        direccion = _direcion;
+        nombres = _nombres;
+        dni = _dni;
+        direccion = _direccion;
     }
 
-    int getid () const
+    int GetId() const
     {
-    return id;
+        return id;
     }
-    void setId( int id)
+
+    void SetId(int id)
     {
         id = id;
     }
@@ -51,12 +54,12 @@ public:
         nombres = nombres;
     }
 
-    string GetDni() const
+    int GetDni() const
     {
-        return DNI;
+        return dni;
     }
 
-    void SetDni(string dni)
+    void SetDni(int dni)
     {
         dni = dni;
     }
@@ -70,6 +73,4 @@ public:
     {
         direccion = direccion;
     }
-
-    
 };
